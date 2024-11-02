@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:padding="10dp"
+    tools:context=".getstoxx.presentation.screens.AddStockFragment">
+
+
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_marginTop="?attr/actionBarSize"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="648dp"
+               android:orientation="vertical"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintGuide_percent=".85"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/tvAddStock"
+               android:layout_width="0dp"
+               android:layout_height="48dp"
+               android:layout_marginTop="5dp"
+               android:gravity="left|center"
+               android:text="@string/add_stocks"
+               android:textColor="@color/white"
+               android:textSize="15sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toStartOf="@+id/containerAdd"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:id="@+id/containerAdd"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/tvAddStock"
+               app:layout_constraintEnd_toEndOf="parent"
+               >
+
+               <Button
+                   android:layout_weight="1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/save"
+                   android:textColor="@color/white"
+                   android:textSize="15sp"
+
+                   />
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/cancel"
+                   android:layout_marginLeft="5dp"
+                   android:textColor="@color/white"
+                   android:textSize="15sp"
+                   android:layout_weight="1"
+
+
+                   />
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           <TextView
+               android:id="@+id/tvCompanyName"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/company_name"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toStartOf="@+id/containerAdd"
+               app:layout_constraintTop_toBottomOf="@+id/tvAddStock" />
+
+           <EditText
+               android:id="@+id/etCompanyName"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:hint="@string/search_by_company_name"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvCompanyName" />
+
+           <TextView
+               android:id="@+id/tvInvestmentDate"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/investment_date"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etCompanyName" />
+
+           <EditText
+               android:id="@+id/etInvestmentDate"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvInvestmentDate" />
+
+           <ImageView
+               android:id="@+id/ivCalender"
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:src="@drawable/ic_calendar"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toEndOf="@+id/etInvestmentDate"
+               app:layout_constraintTop_toTopOf="@+id/etInvestmentDate"
+               android:layout_marginTop="5dp"
+            />
+
+
+           <TextView
+               android:id="@+id/tvInvestmentPrice"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/investment_price"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etInvestmentDate" />
+
+           <EditText
+               android:id="@+id/etInvestmentPrice"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvInvestmentPrice" />
+
+           <TextView
+               android:id="@+id/tvQuantity"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/quantity"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etInvestmentPrice" />
+
+           <EditText
+               android:id="@+id/etQuantity"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
+
+           <TextView
+               android:id="@+id/tvGrossAmount"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/gross_amount"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etQuantity" />
+
+           <EditText
+               android:id="@+id/etGrossAmount"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvGrossAmount" />
+
+           <TextView
+               android:id="@+id/tvCharges"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/charges_optional"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etGrossAmount" />
+
+           <EditText
+               android:id="@+id/etCharges"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvCharges" />
+
+           <TextView
+               android:id="@+id/tvNetAmount"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:gravity="left|center"
+               android:text="@string/net_amount"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/etCharges" />
+
+           <EditText
+               android:id="@+id/etNetAmount"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="8dp"
+               android:ems="10"
+               android:inputType="text"
+               android:background="@drawable/edit_text_outline_border"
+               android:textColor="@color/light_gray"
+               android:textSize="16sp"
+               app:layout_constraintEnd_toStartOf="@+id/guideline"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvNetAmount" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

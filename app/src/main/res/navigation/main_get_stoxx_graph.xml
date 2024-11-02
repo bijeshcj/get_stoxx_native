@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_get_stoxx_graph"
+    app:startDestination="@id/getStoxxHomeFragment">
+
+    <fragment
+        android:id="@+id/getStoxxHomeFragment"
+        android:name="com.bijesh.navigationargs.getstoxx.GetStoxxHomeFragment"
+        android:label="fragment_get_stoxx_home"
+        tools:layout="@layout/fragment_get_stoxx_home" >
+        <action
+            android:id="@+id/action_getStoxxHomeFragment_to_addStockFragment"
+            app:destination="@id/addStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStockFragment"
+        android:name="com.bijesh.navigationargs.getstoxx.presentation.screens.AddStockFragment"
+        android:label="fragment_add_stock"
+        tools:layout="@layout/fragment_add_stock" />
+</navigation>
